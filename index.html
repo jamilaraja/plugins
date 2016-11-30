@@ -17,7 +17,7 @@
 
     </head>
     <body>
-      <table>
+      <table id="example">
     <thead>
         <tr>
             <th>Year</th>
@@ -230,8 +230,15 @@
         </script>
 <script>
 $(document).ready(function(){
-    $('table').DataTable();
-});
+    $('table').DataTable({
+        "order": [[ 0, "desc" ]]
+        "scrollY":        "150px",
+        "scrollCollapse": true,
+        "paging":         false
+    } );
+} );
+
+
 </script>
 
 </script>
